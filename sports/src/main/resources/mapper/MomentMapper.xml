@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper>
+<mapper namespace="com.leiyonglin.dao.moment.MomentDao">
     <resultMap id="BaseResultMap" type="com.leiyonglin.pojo.moment.Moment">
         <id column="id" property="momentId"></id>
         <result column="userId" property="userId"></result>
         <result column="username" property="userName"></result>
         <result column="userIconUrl" property="userIconURL"></result>
         <result column="content" property="content"></result>
+        <result column="imageUrls" property="imageUrls"></result>
     </resultMap>
+
+    <sql id="base_column">
+        id, userId, username, userIconUrl, content, imageUrls
+    </sql>
+
+    <select id="queryMomentList" resultMap="BaseResultMap">
+        SELECT
+        <include refid="base_column"></include>
+        FROM moment m
+    </select>
+
 </mapper>

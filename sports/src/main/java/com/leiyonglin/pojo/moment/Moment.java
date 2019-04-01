@@ -9,7 +9,7 @@ public class Moment {
     private String userName;
     private String userIconURL;
     private String content;
-    private List<String> imageUrls;
+    private String imageUrls;
 
     public Integer getUserId() {
         return userId;
@@ -51,11 +51,11 @@ public class Moment {
         this.content = content;
     }
 
-    public List<String> getImageUrls() {
+    public String getImageUrls() {
         return imageUrls;
     }
 
-    public void setImageUrls(List<String> imageUrls) {
+    public void setImageUrls(String imageUrls) {
         this.imageUrls = imageUrls;
     }
 }
