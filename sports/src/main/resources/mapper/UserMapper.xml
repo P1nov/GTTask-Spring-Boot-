@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.leiyonglin.dao.user.UserDao">
+    
+    <resultMap id="BaseResultMap" type="com.leiyonglin.pojo.user.User">
+        <id column="id" property="userId" jdbcType="INTEGER"></id>
+        <result column="username" property="username" jdbcType="VARCHAR"></result>
+        <result column="telephone" property="telephone" jdbcType="VARCHAR"></result>
+    </resultMap>
+    
+    <sql id="base_column">
+        id, username, telephone
+    </sql>
+
+    <select id="judgeSameAccount" resultType="java.lang.Integer">
+        SELECT COUNT(id) FROM user u WHERE u.username = #{username} OR u.telephone = #{telephone}
+    </select>
+
+    <select id="doLoginWith" resultMap="BaseResultMap">
+        SELECT id, username, telephone
+        FROM user u WHERE u.username=#{username} AND u.md5Pass = #{md5Password}
+    </select>
+
+    <update id="updateLoginState">
+        UPDATE user SET last_login_time=#{login_time} WHERE id=#{userId}
+    </update>
+
+    <insert id="doRegistWith">
+        INSERT INTO user (username, md5Pass, telephone) VALUES (#{username}, #{md5Password}, #{telephone})
+    </insert>
+</mapper>
