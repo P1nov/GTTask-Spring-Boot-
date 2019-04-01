@@ -23,10 +23,8 @@ public class ImageUploader {
     @RequestMapping(value = "/upload", method = RequestMethod.GET)
     public JsonResult imageUpload(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request, HttpServletResponse response){
 
-        Map<String, Object> map = new HashMap<String, Object>();
         File imageFile = null;
         String url = "";
-        int code = 1;
 
         String fileName = file.getOriginalFilename();
 
