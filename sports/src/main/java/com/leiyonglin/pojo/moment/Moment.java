@@ -5,10 +5,19 @@ import java.util.List;
 public class Moment {
 
     private Integer momentId;
+    private Integer userId;
     private String userName;
     private String userIconURL;
     private String content;
     private List<String> imageUrls;
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
     public Integer getMomentId() {
         return momentId;
