@@ -59,7 +59,7 @@ public class UserServiceImpl implements UserService {
         }catch (Exception e){
 
 
-            return JsonResult.doError();
+            return JsonResult.doError(500, e.getLocalizedMessage());
         }
 
 
@@ -83,7 +83,7 @@ public class UserServiceImpl implements UserService {
                     return JsonResult.doSuccess();
                 }else{
 
-                    return JsonResult.doError();
+                    return JsonResult.doError(500, "操作失败");
                 }
 
             }else{
@@ -96,7 +96,7 @@ public class UserServiceImpl implements UserService {
             System.out.println(e.getLocalizedMessage());
             System.out.println(e.getMessage());
 
-            return new JsonResult(-1, e.getLocalizedMessage(), null);
+            return JsonResult.doError(500, e.getLocalizedMessage());
         }
     }
 }

@@ -20,4 +20,8 @@
         FROM moment m
     </select>
 
+    <insert id="addNewMoment">
+        INSERT INTO moment(content, imageUrls) VALUES (#{moment.content}, #{moment.imageUrls})
+    </insert>
+
 </mapper>

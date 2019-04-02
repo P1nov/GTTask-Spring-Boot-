@@ -51,9 +51,9 @@ public class JsonResult {
 
     }
 
-    public static JsonResult doError(){
+    public static JsonResult doError(Integer code, String message){
 
-        return new JsonResult(500, "操作失败，请稍后再试", null);
+        return new JsonResult(code, message, null);
     }
 
     public static JsonResult doLoginAcountOrPasswordError(){
