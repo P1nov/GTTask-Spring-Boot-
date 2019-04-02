@@ -12,15 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 
 @RestController
 @RequestMapping("/image")
 public class ImageUploader {
 
-    @RequestMapping(value = "/upload", method = RequestMethod.GET)
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public JsonResult imageUpload(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request, HttpServletResponse response){
 
         File imageFile = null;
@@ -55,11 +53,11 @@ public class ImageUploader {
                         return new JsonResult(0, "上传成功", url);
                     }catch(Exception e){
 
-                        return JsonResult.doError();
+                        return JsonResult.doError(500, e.getLocalizedMessage());
                     }
                 }else{
 
-                    return JsonResult.doError();
+                    return JsonResult.doError(501, "文件上传失败");
 
                 }
             }else{
@@ -73,7 +71,7 @@ public class ImageUploader {
                     return new JsonResult(0, "上传成功", url);
                 }catch(Exception e){
 
-                    return JsonResult.doError();
+                    return JsonResult.doError(500, e.getLocalizedMessage());
                 }
 
             }
