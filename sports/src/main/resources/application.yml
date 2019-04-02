@@ -12,4 +12,3 @@ spring:
     password: pinoyaojiayou0
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
-
