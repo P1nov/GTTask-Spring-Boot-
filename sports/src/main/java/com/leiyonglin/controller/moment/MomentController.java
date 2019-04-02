@@ -3,6 +3,7 @@ package com.leiyonglin.controller.moment;
 import com.leiyonglin.common.base.JsonResult;
 import com.leiyonglin.pojo.moment.Moment;
 import com.leiyonglin.service.moment.MomentService;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +27,7 @@ public class MomentController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult addNewMoment(@RequestBody Map<String, String> resultMap, HttpServletRequest request, HttpServletResponse response){
+    public JsonResult addNewMoment(@NotNull @RequestBody Map<String, String> resultMap, HttpServletRequest request, HttpServletResponse response){
 
         Moment moment = new Moment();
         String content = resultMap.get("content");
