@@ -22,20 +22,24 @@ public class MomentController {
     @ResponseBody
     public JsonResult momentList(){
 
-        return null;
+        JsonResult json = momentService.momentList();
+
+        return json;
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
-    public JsonResult addNewMoment(@NotNull @RequestBody Map<String, String> resultMap, HttpServletRequest request, HttpServletResponse response){
+    public JsonResult addNewMoment(@RequestBody Map<String, String> resultMap, HttpServletRequest request, HttpServletResponse response){
 
         Moment moment = new Moment();
         String content = resultMap.get("content");
-        String imageUrls = resultMap.get("imageList");
+        String imageUrls = resultMap.get("imageUrls");
 
         moment.setContent(content);
         moment.setImageUrls(imageUrls);
 
-        return momentService.addNewMoment(moment);
+        JsonResult json = momentService.addNewMoment(moment);
+
+        return json;
     }
 }

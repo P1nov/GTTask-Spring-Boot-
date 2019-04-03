@@ -1,6 +1,7 @@
 package com.leiyonglin.dao.moment;
 
 import com.leiyonglin.pojo.moment.Moment;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -11,5 +12,5 @@ public interface MomentDao {
 
     List<Moment> queryMomentList();
 
-    Integer addNewMoment(@RequestParam(value = "moment") Moment moment);
+    Integer addNewMoment(@Param(value = "moment") Moment moment);
 }
