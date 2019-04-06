@@ -1,6 +1,6 @@
 package com.leiyonglin.service.user;
 
-import com.leiyonglin.common.base.JsonResult;
+import com.leiyonglin.base.JsonResult;
 
 public interface UserService {
 

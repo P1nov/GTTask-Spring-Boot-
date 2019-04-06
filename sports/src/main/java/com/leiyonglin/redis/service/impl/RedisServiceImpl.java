@@ -1,7 +1,7 @@
-package com.leiyonglin.common.redis.service.impl;
+package com.leiyonglin.redis.service.impl;
 
-import com.leiyonglin.common.base.Constant;
-import com.leiyonglin.common.redis.service.RedisService;
+import com.leiyonglin.base.Constant;
+import com.leiyonglin.redis.service.RedisService;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisStringCommands;

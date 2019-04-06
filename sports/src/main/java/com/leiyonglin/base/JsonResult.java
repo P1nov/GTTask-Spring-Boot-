@@ -1,9 +1,4 @@
-package com.leiyonglin.common.base;
-
-import com.leiyonglin.common.token.GTTokenUtil;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.leiyonglin.base;
 
 public class JsonResult {
 

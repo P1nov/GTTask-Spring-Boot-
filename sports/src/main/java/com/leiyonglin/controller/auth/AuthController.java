@@ -1,7 +1,7 @@
 package com.leiyonglin.controller.auth;
 
-import com.leiyonglin.common.base.Constant;
-import com.leiyonglin.common.base.JsonResult;
+import com.leiyonglin.base.Constant;
+import com.leiyonglin.base.JsonResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

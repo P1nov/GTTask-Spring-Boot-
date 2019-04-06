@@ -1,8 +1,8 @@
 package com.leiyonglin.service_impl.user;
 
-import com.leiyonglin.common.MD5Util.MD5Util;
-import com.leiyonglin.common.base.JsonResult;
-import com.leiyonglin.common.token.GTTokenUtil;
+import com.leiyonglin.MD5Util.MD5Util;
+import com.leiyonglin.base.JsonResult;
+import com.leiyonglin.token.GTTokenUtil;
 import com.leiyonglin.dao.user.UserDao;
 import com.leiyonglin.pojo.user.User;
 import com.leiyonglin.service.user.UserService;

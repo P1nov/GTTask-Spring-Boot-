@@ -1,7 +1,7 @@
-package com.leiyonglin.common.token;
+package com.leiyonglin.token;
 
-import com.leiyonglin.common.MD5Util.MD5Util;
-import com.leiyonglin.common.redis.service.RedisService;
+import com.leiyonglin.MD5Util.MD5Util;
+import com.leiyonglin.redis.service.RedisService;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;

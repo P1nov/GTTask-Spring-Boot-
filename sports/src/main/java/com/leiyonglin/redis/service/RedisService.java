@@ -1,4 +1,4 @@
-package com.leiyonglin.common.redis.service;
+package com.leiyonglin.redis.service;
 
 public interface RedisService {
 

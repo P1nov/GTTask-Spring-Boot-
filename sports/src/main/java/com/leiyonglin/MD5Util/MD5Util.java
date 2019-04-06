@@ -1,4 +1,4 @@
-package com.leiyonglin.common.MD5Util;
+package com.leiyonglin.MD5Util;
 
 
 import org.springframework.util.DigestUtils;

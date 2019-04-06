@@ -1,6 +1,6 @@
 package com.leiyonglin.controller.user;
 
-import com.leiyonglin.common.base.JsonResult;
+import com.leiyonglin.base.JsonResult;
 import com.leiyonglin.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

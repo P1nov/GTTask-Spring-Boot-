@@ -1,6 +1,6 @@
 package com.leiyonglin.controller.image;
 
-import com.leiyonglin.common.base.JsonResult;
+import com.leiyonglin.base.JsonResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;

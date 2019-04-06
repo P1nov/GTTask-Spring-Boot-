@@ -1,4 +1,4 @@
-package com.leiyonglin.common.base;
+package com.leiyonglin.base;
 
 public class Constant {
 

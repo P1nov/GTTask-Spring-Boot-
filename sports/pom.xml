@@ -6,12 +6,13 @@
         <groupId>com.leiyonglin</groupId>
         <artifactId>spb_design</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
     <groupId>com.leiyonglin</groupId>
     <artifactId>sports</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>sports</name>
+    <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -50,15 +51,17 @@
         </dependency>
 
         <dependency>
-            <groupId>com.leiyonglin</groupId>
-            <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>2.1.3.RELEASE</version>
+            <optional>true</optional>
+            <scope>true</scope>
         </dependency>
     </dependencies>
 
@@ -67,6 +70,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
             </plugin>
         </plugins>
     </build>

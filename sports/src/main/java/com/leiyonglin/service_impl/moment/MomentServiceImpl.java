@@ -1,6 +1,6 @@
 package com.leiyonglin.service_impl.moment;
 
-import com.leiyonglin.common.base.JsonResult;
+import com.leiyonglin.base.JsonResult;
 import com.leiyonglin.dao.moment.MomentDao;
 import com.leiyonglin.pojo.moment.Moment;
 import com.leiyonglin.service.moment.MomentService;
