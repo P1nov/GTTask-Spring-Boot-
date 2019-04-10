@@ -13,7 +13,7 @@ import java.util.List;
 public class DayManagementServiceImpl implements DayManagementService {
 
     @Autowired
-    DayManagementDao dayManagementDao;
+    private DayManagementDao dayManagementDao;
 
     @Override
     public JsonResult dayManagementList(Integer userId) {
@@ -28,10 +28,7 @@ public class DayManagementServiceImpl implements DayManagementService {
                 json.setContent(list);
                 json.setMessage("获取数据成功！");
                 return json;
-            }else{
-
-                return JsonResult.doError(101, "暂时没有查询到数据～");
-            }
+            }else return JsonResult.doError(101, "暂时没有查询到数据～");
 
         }catch(Exception e){
 
