@@ -30,7 +30,7 @@ public class DayManagementServiceImpl implements DayManagementService {
                 return json;
             }else{
 
-                return JsonResult.doError(101, "数据暂时没有查询到");
+                return JsonResult.doError(101, "暂时没有查询到数据～");
             }
 
         }catch(Exception e){
