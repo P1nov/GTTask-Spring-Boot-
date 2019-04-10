@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper>
+    <resultMap id="DayManagementResultMap" type="com.leiyonglin.pojo.DayManagement.DayManagement">
+
+        <id column="id" property="managementId"></id>
+        <result column="dateInterval" property="dateInterval"></result>
+        <result column="theme" property="managementTheme"></result>
+        <result column="address" property="address"></result>
+        <association property="com.leiyonglin.pojo.DayManagement.DayManagementDetail">
+            <id column="id" property="managementDetailId"></id>
+            <result column="managementId" property="managementId"></result>
+            <result column="startDate" property="startDate"></result>
+            <result column="endDate" property="endDate"></result>
+            <result column="content" property="content"></result>
+        </association>
+
+    </resultMap>
+
+    <sql id="day_management_columns">
+        id, managementDate, theme, address
+    </sql>
+
+    <sql id="day_management_detail_columns">
+
+        id, managementId, startDate, endDate, content
+    </sql>
+
+    <select id="getDayamanagementList" resultMap="DayManagementResultMap">
+        SELECT a.id, a.managementDate, a.theme, a.address, b.id, b.managementId, b.startDate, b.endDate, b.content FROM day_management a LEFT JOIN day_management_detail b
+        ON b.managementId = a.id WHERE a.id = #{userId}
+    </select>
+</mapper>

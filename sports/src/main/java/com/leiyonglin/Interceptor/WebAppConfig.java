@@ -11,7 +11,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-        registry.addInterceptor(new SportInterceptor()).addPathPatterns("/user/**", "/moment/**");
+        registry.addInterceptor(new SportInterceptor()).addPathPatterns("/moment/**");
     }
 //
 //    @Value("${gt.imagepath}")
